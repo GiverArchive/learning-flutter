@@ -1,18 +1,4 @@
-/*
-  Aula 07
-*/
-
 import 'package:flutter/material.dart';
-
-class App extends StatelessWidget {
-  const App({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.blue), home: HomePage());
-  }
-}
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,21 +21,5 @@ class _HomePageState extends State<HomePage> {
         )
       )
     );
-  }
-}
-
-// ---------------------------------------------
-
-class Exemplo extends StatefulWidget {
-  @override
-  ExemploState createState() {
-    return ExemploState();
-  }
-}
-
-class ExemploState extends State<Exemplo> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

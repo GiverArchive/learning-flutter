@@ -1,7 +1,3 @@
-/*
-  Aula 03-05
-*/
-
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
