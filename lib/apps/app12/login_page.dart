@@ -22,12 +22,23 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(
-                  "https://github.com/GiverPlay007.png",
-                  width: 128.0,
-                  height: 128.0
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.network(
+                      "https://github.com/GiverPlay007.png",
+                      width: 72.0,
+                      height: 72.0
+                    ),
+                    Image.asset(
+                      "assets/images/dinastia.png",
+                      width: 72.0,
+                      height: 72.0
+                    )
+                  ]
                 ),
-                Container( height: 20 ),
+                SizedBox( height: 20 ),
                 TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
