@@ -22,6 +22,12 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.network(
+                  "https://github.com/GiverPlay007.png",
+                  width: 128.0,
+                  height: 128.0
+                ),
+                Container( height: 20 ),
                 TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
