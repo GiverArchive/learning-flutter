@@ -27,26 +27,42 @@ class _LoginPageState extends State<LoginPage> {
                       width: 72.0, height: 72.0)
                 ]),
             SizedBox(height: 20),
-            TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                    labelText: 'Email', border: OutlineInputBorder()),
-                onChanged: (text) => email = text),
-            SizedBox(height: 10),
-            TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    labelText: 'Senha', border: OutlineInputBorder()),
-                onChanged: (text) => password = text),
-            SizedBox(height: 15),
-            ElevatedButton(
-                child: Text('Entrar'),
-                onPressed: () {
-                  if (email == 'example@giverplay.me' &&
-                      password == 'senha123') {
-                    Navigator.of(context).pushReplacementNamed('/home');
-                  }
-                })
+            Card(
+                child: Padding(
+              padding: const EdgeInsets.only(
+                  left: 12, right: 12, top: 20, bottom: 12),
+              child: Column(children: [
+                TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                        labelText: 'Email', border: OutlineInputBorder()),
+                    onChanged: (text) => email = text),
+                SizedBox(height: 10),
+                TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        labelText: 'Senha', border: OutlineInputBorder()),
+                    onChanged: (text) => password = text),
+                SizedBox(height: 15),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.red, // background
+                      onPrimary: Colors.white, // foreground
+                    ),
+                    child: Container(
+                        width: double.infinity,
+                        child: Text(
+                          'Entrar',
+                          textAlign: TextAlign.center,
+                        )),
+                    onPressed: () {
+                      if (email == 'example@giverplay.me' &&
+                          password == 'senha123') {
+                        Navigator.of(context).pushReplacementNamed('/home');
+                      }
+                    })
+              ]),
+            )),
           ]),
         ),
       ),
@@ -56,16 +72,13 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: Image.asset("assets/images/foca.png", fit: BoxFit.cover)
-          ),
-          Container(color: Colors.black.withOpacity(0.3)),
-          _body()
-        ]
-    ));
+        body: Stack(children: [
+      SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Image.asset("assets/images/foca.png", fit: BoxFit.cover)),
+      Container(color: Colors.black.withOpacity(0.3)),
+      _body()
+    ]));
   }
 }
