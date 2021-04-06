@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
           UserAccountsDrawerHeader(
             accountName: Text('Giverzinho'),
             accountEmail: Text('contact@giverplay.me'),
-            currentAccountPicture: Image.asset('assets/images/dinastia.png'),
+            currentAccountPicture: ClipRRect(borderRadius: BorderRadius.circular(40), child: Image.asset('assets/images/dinastia.png')),
           ),
           ListTile(
             leading: Icon(Icons.home),
